@@ -1,0 +1,25 @@
+<table class="table table-responsive table-hover" style="width: 100%;">
+  <thead>
+    <tr>
+      <th id="th1">
+        Category ID
+      </th>
+      <th id="th2">
+        Category
+      </th>
+      <th id="th3">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let item of allRecords | paginate: { itemsPerPage: 10, currentPage: p }">
+      <td [style.width.px]="width1">{{item.CategoryID}}</td>
+      <td [style.width.px]="width2">{{item.CategoryName}}</td>
+      <td [style.width.px]="width3">{{item.Description}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
