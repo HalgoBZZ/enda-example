@@ -8,6 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { SideComponent } from './components/side/side.component';
 import { DemandesComponent } from './components/demandes/demandes.component';
+import { ModalModule } from 'ngx-bootstrap';
+import { routing } from './app.routing';
+import { DemandesService } from './services/demandes.service';
 
 
 @NgModule({
@@ -20,9 +23,13 @@ import { DemandesComponent } from './components/demandes/demandes.component';
   ],
   imports: [
     BrowserModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ModalModule.forRoot(),
+    routing
   ],
-  providers: [],
+  providers: [
+    DemandesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

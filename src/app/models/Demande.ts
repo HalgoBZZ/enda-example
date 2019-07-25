@@ -1,0 +1,29 @@
+export class Demande {
+    idDmd;
+    nomClient;
+    prenonClient;
+    genre;
+    cin;
+    dateNaissance;
+    actuellement;
+    connaissanceenda;
+    beniciecredit;
+    crediEnCous;
+    activite;
+    descriptionActivite;
+    besoin;
+    montantDemande;
+    capacite;
+    adresseProject;
+    gouvernorat;
+    delegation;
+    agenceEnda;
+    adresseclient;
+    telephone;
+    email;
+    dateSaisie;
+    dateModification;
+    dateReafectation;
+    statut;
+    agence;
+}
